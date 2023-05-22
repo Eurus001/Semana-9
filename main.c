@@ -21,20 +21,20 @@ int main(){
     printf("\nMatriz: \n");
 
     //Asignacion de memoria dinamica de matriz A
-
+    //Asignacion de memoria x
     int*** A = (int***)malloc(x * sizeof(int**));
     if (A == NULL) {
         printf("No se pudo asignar memoria");
         return 1;
     }
-
+    //Asignacion de memoria y
     for (int i = 0; i < x; i++) {
         A[i] = (int**)malloc(y * sizeof(int*));
         if (A[i] == NULL) {
             printf("No se pudo asignar memoria");
             return 1;
         }
-
+        //Asignacion de memoria z
         for (int j = 0; j < y; j++) {
             A[i][j] = (int*)malloc(z * sizeof(int));
             if (A[i][j] == NULL) {
@@ -44,21 +44,21 @@ int main(){
         }
     }
 
-    //Asignacion de memoria dinamica de matriz A
-
+    //Asignacion de memoria dinamica de matriz B
+    //Asignacion de memoria x
     int*** B = (int***)malloc(x * sizeof(int**));
     if (B == NULL) {
         printf("No se pudo asignar memoria");
         return 1;
     }
-
+    //Asignacion de memoria y
     for (int i = 0; i < x; i++) {
         B[i] = (int**)malloc(y * sizeof(int*));
         if (A[i] == NULL) {
             printf("No se pudo asignar memoria");
             return 1;
         }
-
+        //Asignacion de memoria z
         for (int j = 0; j < y; j++) {
             B[i][j] = (int*)malloc(z * sizeof(int));
             if (B[i][j] == NULL) {
@@ -68,6 +68,7 @@ int main(){
         }
     }
 
+    //Seed de random seteado
     srand(time(NULL));
 
     //Asignacion e impreso de matriz normal
@@ -95,7 +96,7 @@ int main(){
         {
             for (int k = 0; k < x; k++) 
             {
-                B[i][j][k] = A[k][j][i];
+                B[i][j][k] = A[k][j][i];        //La transpuesta
                 printf("%d\t", B[i][j][k]);
             }
             printf("\n");
@@ -103,6 +104,7 @@ int main(){
         printf("\n");
     }
 
+    //Fin de programa
     return 0;
 
     }
