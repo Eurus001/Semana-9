@@ -18,7 +18,7 @@ int main(){
     printf("Ingresa la profundidad ");
     scanf("%d", &z);
 
-    printf("Matriz: \n");
+    printf("\nMatriz: \n");
 
     //Asignacion de memoria dinamica de matriz A
 
@@ -88,7 +88,7 @@ int main(){
 
     //Asignacion e impreso de matriz transpuesta
 
-    printf("Matriz transpuesta:\n");
+    printf("\nMatriz transpuesta:\n");
     for (int i = 0; i < z; i++) 
     {
         for (int j = 0; j < y; j++) 
